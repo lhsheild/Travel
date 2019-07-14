@@ -17,34 +17,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    recommendList: Array
+  },
   data () {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201403/06/2f1ae390435649f80130201861e5cd8e.jpg_200x200_be60d95d.jpg',
-          title: '南宁动物园',
-          desc: '野性与激情相碰撞的野生动物与主题乐园'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201403/06/2f1ae390435649f80130201861e5cd8e.jpg_200x200_be60d95d.jpg',
-          title: '南宁动物园',
-          desc: '野性与激情相碰撞的野生动物与主题乐园'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201403/06/2f1ae390435649f80130201861e5cd8e.jpg_200x200_be60d95d.jpg',
-          title: '南宁动物园',
-          desc: '野性与激情相碰撞的野生动物与主题乐园'
-        },
-        {
-          id: '0004',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/201403/06/2f1ae390435649f80130201861e5cd8e.jpg_200x200_be60d95d.jpg',
-          title: '南宁动物园',
-          desc: '野性与激情相碰撞的野生动物与主题乐园'
-        }
-      ]
     }
   }
 }
