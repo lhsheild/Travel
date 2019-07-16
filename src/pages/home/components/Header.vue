@@ -2,16 +2,25 @@
   <div class="header">
     <div class="header-left"><div class="iconfont back-icon">&#xe624;</div></div>
     <div class="header-input"><span class="iconfont">&#xe632;</span>输入城市景点/游玩/主题</div>
-    <router-link to="/city"><div class="header-right">{{this.$store.state.city}}<span class="iconfont arrow-icon">&#xe6aa;</span></div></router-link>
+    <router-link to="/city">
+      <div class="header-right">{{city}}
+        <span class="iconfont arrow-icon">&#xe6aa;</span>
+      </div>
+    </router-link>
   </div>
 </template>
 
 <script>
+import { mapState, mapGetters } from 'vuex'
+
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
+  computed: {
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
+  }
 }
 </script>
-<!--1rem = html font-size = 50px-->
 <style scoped lang="stylus">
   @import "~styles/varibles.styl"
 
@@ -29,6 +38,7 @@ export default {
 
     .header-left
       width: $headerHeight
+      padding 0.2rem
       float: left
       .back-icon
         text-align center
@@ -37,6 +47,7 @@ export default {
     .header-input
       flex: 1
       background: #fff
+      padding 0.2rem
       border-radius: .1rem
       margin-top: .24rem
       margin-left: .2rem
@@ -46,7 +57,8 @@ export default {
       color: #ccc
 
     .header-right
-      width: 3.24rem
+      min-width: 4.24rem
+      padding 0.1rem
       text-align center
       color white
       .arrow-icon
