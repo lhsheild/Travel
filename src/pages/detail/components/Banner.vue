@@ -1,4 +1,5 @@
 <template>
+  <div>
     <div class="banner">
       <img class="banner-img" src="http://img1.qunarzz.com/sight/p0/1806/da/da0f9ef498e8b1f8a3.img.jpg_600x330_c188d4ac.jpg" alt="">
       <div class="banner-info">
@@ -6,11 +7,19 @@
         <div class="banner-number"><span class="iconfont banner-icon">&#xe63e;</span>9</div>
       </div>
     </div>
+    <common-gallary></common-gallary>
+  </div>
+
 </template>
 
 <script>
+import CommonGallary from 'common/gallary/Gallary'
+
 export default {
-  name: 'DetailBanner'
+  name: 'DetailBanner',
+  components: {
+    CommonGallary
+  }
 }
 </script>
 
