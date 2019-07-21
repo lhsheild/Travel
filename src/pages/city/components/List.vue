@@ -111,7 +111,9 @@ export default {
           border-radius .05rem
     .item-list
       .item
-        line-height: 1.84rem
+        z-index 3
+        width 100%
+        line-height: 2.84rem
         color: #000
         padding-left:.3rem
 </style>
